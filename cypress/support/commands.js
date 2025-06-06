@@ -41,3 +41,9 @@ Cypress.Commands.add('Clicar', (campo) => {
 Cypress.Commands.add('Verificar', (campo, texto) => {
     cy.get(campo).should('contain', texto);
 })
+
+Cypress.Commands.add('LoginWeb', (email, senha) => {
+    cy.Digitar('[data-testid="email"]', email);
+    cy.Digitar('[data-testid="senha"]', senha);
+    cy.Clicar('[data-testid="entrar"]');
+})
